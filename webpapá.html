@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Metropolis:wght@500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#2a2a2a",
+                    "primary": "#c8c6c5",
+                    "background": "#131313",
+                    "on-secondary-fixed-variant": "#544600",
+                    "on-surface": "#e4e2e1",
+                    "surface-container-low": "#1b1c1c",
+                    "on-secondary-container": "#725f00",
+                    "error": "#ffb4ab",
+                    "on-primary-fixed-variant": "#474646",
+                    "secondary-container": "#ffdb3c",
+                    "on-background": "#e4e2e1",
+                    "tertiary-fixed": "#e2e2e2",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "inverse-on-surface": "#303030",
+                    "on-primary-fixed": "#1c1b1b",
+                    "on-primary-container": "#7e7d7d",
+                    "on-secondary-fixed": "#221b00",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "on-surface-variant": "#c4c7c7",
+                    "error-container": "#93000a",
+                    "on-secondary": "#3a3000",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "on-error-container": "#ffdad6",
+                    "inverse-surface": "#e4e2e1",
+                    "surface-dim": "#131313",
+                    "tertiary": "#c6c6c7",
+                    "surface-bright": "#393939",
+                    "surface-tint": "#c8c6c5",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "primary-fixed": "#e5e2e1",
+                    "on-primary": "#313030",
+                    "surface": "#131313",
+                    "tertiary-container": "#101213",
+                    "on-tertiary-container": "#7c7d7e",
+                    "surface-container-lowest": "#0e0e0e",
+                    "inverse-primary": "#5f5e5e",
+                    "surface-container-highest": "#353535",
+                    "on-tertiary": "#2f3131",
+                    "secondary-fixed": "#ffe16d",
+                    "on-error": "#690005",
+                    "secondary-fixed-dim": "#e9c400",
+                    "surface-variant": "#353535",
+                    "outline-variant": "#444748",
+                    "outline": "#8e9192",
+                    "primary-container": "#121212",
+                    "surface-container": "#1f2020",
+                    "secondary": "#fff9ef"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-lg": "64px",
+                    "stack-md": "32px",
+                    "margin-desktop": "80px",
+                    "margin-tablet": "40px",
+                    "stack-sm": "16px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "container-max": "1440px",
+                    "gutter": "32px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Metropolis"],
+                    "button": ["Metropolis"],
+                    "headline-md": ["Metropolis"],
+                    "label-caps": ["Inter"],
+                    "display-lg": ["Metropolis"],
+                    "body-lg": ["Inter"],
+                    "headline-lg-mobile": ["Metropolis"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "button": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            background-color: rgba(19, 19, 19, 0.8);
+        }
+        .text-shadow-sm {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+
+<nav class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/20 shadow-sm">
+<div class="flex justify-between items-center px-6 md:px-margin-desktop py-4 w-full max-w-container-max mx-auto">
+<span class="font-headline-md text-xl md:text-headline-md tracking-tighter text-on-surface">RAFF CONSTRUCCIONES</span>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-label-caps text-label-caps text-on-surface hover:text-secondary-container transition-colors duration-300" href="#servicios">Servicios</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-secondary-container transition-colors duration-300" href="#proyectos">Proyectos</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-secondary-container transition-colors duration-300" href="#contacto">Contacto</a>
+</div>
+<button class="bg-secondary-container text-on-secondary-container px-4 md:px-6 py-2 font-button text-button rounded hover:opacity-80 transition-all duration-300 scale-105 active:scale-95">
+                Cotizar
+            </button>
+</div>
+</nav>
+
+<section class="relative h-screen flex items-center px-6 md:px-margin-desktop overflow-hidden">
+<div class="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center">
+<div class="absolute inset-0 bg-black/60"></div>
+</div>
+<div class="relative z-10 max-w-2xl">
+<h1 class="font-display-lg text-4xl md:text-display-lg text-white mb-stack-sm leading-tight">
+                Construimos tus ideas
+            </h1>
+<p class="font-body-lg text-base md:text-body-lg text-on-surface-variant mb-stack-md max-w-lg">
+                Excelencia estructural y diseño de vanguardia para proyectos que trascienden el tiempo. Transformamos visiones en realidades arquitectónicas premium.
+            </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-secondary-container text-on-secondary-container px-8 py-4 font-button text-button inline-flex items-center gap-2 hover:opacity-90 transition-all shadow-lg" href="https://wa.link/g1pyt8">
+<span class="material-symbols-outlined">chat</span> WHATSAPP
+</a>
+<a class="border border-white text-white px-8 py-4 font-button text-button hover:bg-white hover:text-black transition-all" href="#contacto">
+                    CONTACTO
+                </a>
+</div>
+</div>
+</section>
+
+<section class="py-stack-lg px-6 md:px-margin-desktop max-w-container-max mx-auto" id="servicios">
+<div class="mb-stack-md">
+<span class="font-label-caps text-label-caps text-secondary-container tracking-[0.2em]">SERVICIOS</span>
+<h2 class="font-headline-lg text-3xl md:text-headline-lg mt-2">Servicios Integrales</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="bg-surface-container p-stack-md border-l-2 border-transparent hover:border-secondary-container transition-all group">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-4 block group-hover:scale-110 transition-transform">home</span>
+<h3 class="font-headline-md text-2xl mb-2">Construcción de casas</h3>
+<p class="text-on-surface-variant font-body-md">Residencias de alta gama con enfoque en eficiencia energética y materiales nobles.</p>
+</div>
+<div class="bg-surface-container p-stack-md border-l-2 border-transparent hover:border-secondary-container transition-all group">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-4 block group-hover:scale-110 transition-transform">architecture</span>
+<h3 class="font-headline-md text-2xl mb-2">Remodelaciones</h3>
+<p class="text-on-surface-variant font-body-md">Transformación completa de espacios existentes con acabados de lujo y precisión técnica.</p>
+</div>
+<div class="bg-surface-container p-stack-md border-l-2 border-transparent hover:border-secondary-container transition-all group">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-4 block group-hover:scale-110 transition-transform">outdoor_grill</span>
+<h3 class="font-headline-md text-2xl mb-2">Quinchos</h3>
+<p class="text-on-surface-variant font-body-md">Espacios sociales diseñados para el confort, integrando parrillas gourmet y diseño moderno.</p>
+</div>
+<div class="bg-surface-container p-stack-md border-l-2 border-transparent hover:border-secondary-container transition-all group">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-4 block group-hover:scale-110 transition-transform">add_business</span>
+<h3 class="font-headline-md text-2xl mb-2">Ampliaciones</h3>
+<p class="text-on-surface-variant font-body-md">Crecimiento estructural armónico que se integra perfectamente con la edificación original.</p>
+</div>
+<div class="bg-surface-container p-stack-md border-l-2 border-transparent hover:border-secondary-container transition-all group">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-4 block group-hover:scale-110 transition-transform">apartment</span>
+<h3 class="font-headline-md text-2xl mb-2">Obras comerciales</h3>
+<p class="text-on-surface-variant font-body-md">Infraestructura corporativa y locales comerciales con optimización de plazos y calidad.</p>
+</div>
+<div class="bg-surface-container p-stack-md border-l-2 border-transparent hover:border-secondary-container transition-all group">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-4 block group-hover:scale-110 transition-transform">format_paint</span>
+<h3 class="font-headline-md text-2xl mb-2">Pintura</h3>
+<p class="text-on-surface-variant font-body-md">Acabados profesionales con materiales de primera línea para protección y estética duradera.</p>
+</div>
+</div>
+</section>
+
+<section class="bg-surface-container-lowest py-stack-lg overflow-hidden" id="proyectos">
+<div class="px-6 md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-stack-md">
+<div>
+<span class="font-label-caps text-label-caps text-secondary-container tracking-[0.2em]">PROYECTOS</span>
+<h2 class="font-headline-lg text-3xl md:text-headline-lg mt-2">Nuestros Proyectos</h2>
+</div>
+<div class="hidden md:block">
+<p class="text-on-surface-variant max-w-xs text-right">Una selección de nuestras obras más emblemáticas, donde la precisión se encuentra con el diseño.</p>
+</div>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4 h-auto md:h-[800px]">
+    <div class="md:col-span-8 h-64 md:h-auto relative group overflow-hidden bg-black">
+        <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 group-hover:scale-110" src="ventana.JPG">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+            <div>
+                <h4 class="text-xl font-bold text-white">Residencia en Rada Tilly</h4>
+                <p class="text-gray-300 text-sm">Ventanales</p>
+            </div>
+        </div>
+    </div>
+    <div class="md:col-span-4 h-64 md:h-auto relative group overflow-hidden bg-black">
+        <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 group-hover:scale-110" src="angulo.jpg">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+            <div>
+                <h4 class="text-xl font-bold text-white">Residencia en Rada Tilly</h4>
+                <p class="text-gray-300 text-sm">Angulo costado/frente</p>
+            </div>
+        </div>
+    </div>
+    <div class="md:col-span-4 h-64 md:h-auto relative group overflow-hidden bg-black">
+        <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 group-hover:scale-110" src="casa.JPG">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+            <div>
+                <h4 class="text-xl font-bold text-white">Residencia Rada Tilly</h4>
+                <p class="text-gray-300 text-sm">Ventanal grande</p>
+            </div>
+        </div>
+    </div>
+    <div class="md:col-span-8 h-64 md:h-auto relative group overflow-hidden bg-black">
+        <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 group-hover:scale-110" src="frente.JPG">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+            <div>
+                <h4 class="text-xl font-bold text-white">Residencia en Rada Tilly</h4>
+                <p class="text-gray-300 text-sm">Frente</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+
+<section class="py-stack-lg bg-surface-container-low" id="contacto">
+<div class="px-6 md:px-margin-desktop max-w-container-max mx-auto text-center">
+<div class="mb-stack-md">
+<span class="font-label-caps text-label-caps text-secondary-container tracking-[0.2em]">CONTACTO</span>
+<h2 class="font-headline-lg text-3xl md:text-headline-lg mt-2">Inicie su proyecto hoy</h2>
+<p class="font-body-lg text-sm md:text-body-lg text-on-surface-variant mt-stack-sm max-w-2xl mx-auto">
+            Estamos listos para transformar su visión en una obra maestra arquitectónica. Póngase en contacto con nuestro equipo de expertos para recibir asesoramiento personalizado.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter mt-stack-md">
+<div class="bg-surface p-stack-md border border-outline-variant/20 hover:border-secondary-container transition-colors">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-4">phone</span>
+<h3 class="font-label-caps text-label-caps text-on-surface-variant mb-2">LLÁMENOS O WHATSAPP</h3>
+<p class="font-headline-md text-xl md:text-headline-md text-on-surface">+54 (11) 2885-9421</p>
+</div>
+<div class="bg-surface p-stack-md border border-outline-variant/20 hover:border-secondary-container transition-colors">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-4">mail</span>
+<h3 class="font-label-caps text-label-caps text-on-surface-variant mb-2">CORREO ELECTRÓNICO</h3>
+<p class="font-headline-md text-lg md:text-headline-md text-on-surface">construccionesraff@gmail.com</p>
+</div>
+</div>
+<div class="mt-stack-md">
+<a class="bg-secondary-container text-on-secondary-container px-10 py-5 font-button text-button inline-flex items-center gap-2 hover:opacity-90 transition-all shadow-lg" href="https://wa.link/g1pyt8">
+<span class="material-symbols-outlined">chat</span> SOLICITAR COTIZACIÓN
+</a>
+</div>
+</div>
+</section>
+
+<footer class="bg-surface-container-lowest border-t border-outline-variant/10 w-full py-stack-lg px-6">
+<div class="flex flex-col md:flex-row justify-between items-center gap-gutter max-w-container-max mx-auto">
+<div class="flex flex-col gap-2 items-center md:items-start text-center md:text-left">
+<span class="font-headline-md text-xl md:text-headline-md text-on-surface">RAFF CONSTRUCCIONES</span>
+<p class="font-body-md text-on-surface-variant text-sm max-w-xs">Excelencia y solidez en cada centímetro construido. Liderando el mercado premium en la Patagonia.</p>
+</div>
+<div class="text-on-surface-variant font-body-md text-xs opacity-90">
+                © 2024 ESTRUCTURA CONSTRUCCIONES PREMIUM. TODOS LOS DERECHOS RESERVADOS.
+            </div>
+</div>
+</footer>
+
+<a class="fixed bottom-6 right-6 z-50 w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl transition-transform hover:scale-110" href="https://wa.link/g1pyt8" style="background-color: rgb(37, 211, 102);">
+<svg fill="white" height="32" viewBox="0 0 24 24" width="32"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.432 5.628 1.433h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+</a>
+
+</body>
+</html>
